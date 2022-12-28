@@ -1,4 +1,4 @@
-# https://github.com/testtestingtester/HowBadIsMyBatch/blob/main/src/CaptchaReader.py
+# https://github.com/McFlat/HowBadIsMyBatch/blob/main/src/CaptchaReader.py
 
 import numpy as np
 import tensorflow as tf
@@ -7,6 +7,7 @@ from tensorflow.keras import layers
 from PIL import Image
 import numpy as np
 import io
+import os
 
 # copied from value of characters variable in captcha_ocr.ipynb or captcha_ocr_trainAndSaveModel.ipynb
 characters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f']
@@ -68,7 +69,9 @@ def _getModel():
     return model
 
 def load_model():
-    _model = keras.models.load_model('model')
+    _model = keras.models.load_model(
+        os.path.join(os.path.dirname(__file__), 'model')
+    )
     __model = keras.models.Model(
         _model.get_layer(name="image").input,
         _model.get_layer(name="dense2").output)

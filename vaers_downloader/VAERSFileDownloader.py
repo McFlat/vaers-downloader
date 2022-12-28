@@ -1,11 +1,11 @@
-# https://github.com/testtestingtester/HowBadIsMyBatch/blob/main/src/VAERSFileDownloader.py
+# https://github.com/McFlat/HowBadIsMyBatch/blob/main/src/VAERSFileDownloader.py
 
 import os
 import time
-from WebDriver import getWebDriver, isCaptchaSolved, saveCaptchaImageAs
+from vaers_downloader.WebDriver import getWebDriver, isCaptchaSolved, saveCaptchaImageAs
 from selenium.webdriver.common.by import By
-from CaptchaReader import getTextInCaptchaImage
-from zipUtils import unzipAndRemove
+from vaers_downloader.CaptchaReader import getTextInCaptchaImage
+from vaers_downloader.zipUtils import unzipAndRemove
 
 
 #def getTextInCaptchaImage(captchaImageFile):

@@ -1,4 +1,4 @@
-# https://github.com/testtestingtester/HowBadIsMyBatch/blob/main/src/zipUtils.py
+# https://github.com/McFlat/HowBadIsMyBatch/blob/main/src/zipUtils.py
 
 import zipfile
 import os

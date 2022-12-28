@@ -1,4 +1,4 @@
-# https://github.com/testtestingtester/HowBadIsMyBatch/blob/main/src/WebDriver.py
+# https://github.com/McFlat/HowBadIsMyBatch/blob/main/src/WebDriver.py
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
