@@ -42,7 +42,6 @@ classifiers = [
 setup(name='vaers_downloader',
     version=metadata['__version__'],
     description='VAERS DATA DOWNLOADER',
-    long_description=read('README.md'),
     classifiers=classifiers,
     keywords='vaers data downloader tensorflow captcha bypass',
     url='https://github.com/McFlat/vaers-downloader',
