@@ -11,7 +11,7 @@ pip install vaers_downloader
 # Usage
 
 ```sh
-python -m vaers_downloader.download
+vaers_downloader [--start=2019] [--end=2019] [--directory=/tmp]
 ```
 
 This will create a new directory named `VAERS` in the currect directory where you ran the above command.
@@ -20,12 +20,10 @@ Pass a parameter or two for the start and end year as below to download data for
 
 Default: basically will download all data from 2019 to whatever the year it is when you run it.
 
-- start=`2019`
-- end=`current year`
 
 ```sh
-python -m vaers_downloader.download 2000
-python -m vaers_downloader.download 1990 1999
+python -m vaers_downloader.download -s 2000
+python -m vaers_downloader.download --start 1990  -e 1999 -d /tmp
 ```
 
 # Development
@@ -39,7 +37,7 @@ pip3 install -r requirements.txt
 ```py
 import os
 import sys
-sys.path.insert(0, './src')
+sys.path.insert(0, './vaers_downloader')
 from VAERSFileDownloader import updateVAERSFiles
 
 updateVAERSFiles(
