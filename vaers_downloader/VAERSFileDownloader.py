@@ -1,11 +1,9 @@
-# https://github.com/McFlat/HowBadIsMyBatch/blob/main/src/VAERSFileDownloader.py
-
 import os
 import time
-from vaers_downloader.WebDriver import getWebDriver, isCaptchaSolved, saveCaptchaImageAs
+from .WebDriver import getWebDriver, isCaptchaSolved, saveCaptchaImageAs
 from selenium.webdriver.common.by import By
-from vaers_downloader.CaptchaReader import getTextInCaptchaImage
-from vaers_downloader.zipUtils import unzipAndRemove
+from .CaptchaReader import getTextInCaptchaImage
+from .zipUtils import unzipAndRemove
 
 
 #def getTextInCaptchaImage(captchaImageFile):
@@ -58,8 +56,7 @@ def downloadVAERSFileAndUnzip(file, workingDirectory):
         zipFile = downloadedFile,
         dstDir = workingDirectory + '/VAERS/')
 
-def updateVAERSFiles(needsUpdate,  years, workingDirectory):
-    if needsUpdate:
-        for year in years:
-            downloadVAERSFileAndUnzip(f'{year}VAERSData.zip', workingDirectory)
-        downloadVAERSFileAndUnzip('NonDomesticVAERSData.zip', workingDirectory)
+def updateVAERSFiles(years, workingDirectory):
+    for year in years:
+        downloadVAERSFileAndUnzip('{year}VAERSData.zip'.format(year=year), workingDirectory)
+    downloadVAERSFileAndUnzip('NonDomesticVAERSData.zip', workingDirectory)

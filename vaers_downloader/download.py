@@ -13,7 +13,6 @@ def downloadVAERSdata(years, directory = os.getcwd()):
   downloadVAERSdata(years=getYears(start=2019, end=date.today().year))
   """
   updateVAERSFiles(
-    needsUpdate = True,
     years = years,
     workingDirectory = directory)
 

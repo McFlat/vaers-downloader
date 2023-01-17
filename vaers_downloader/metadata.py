@@ -20,9 +20,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __author__ = "Frank Knoll (https://github.com/KnollFrank)"
-__copyright__ = "Copyright 2022"
+__copyright__ = "Copyright 2023"
 __maintainer__ = "Alex Goretoy (https://github.com/McFlat)"
 __packager__ = ""
 __email__ = "alex@goretoy.com"
